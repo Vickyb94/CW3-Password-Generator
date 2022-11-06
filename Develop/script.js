@@ -1,5 +1,10 @@
 // Assignment code here
 
+function generatePassword() {
+  /*created a notification to know when password button is clicked*/
+  console.log('Password Button!')
+}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
