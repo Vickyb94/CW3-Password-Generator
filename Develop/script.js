@@ -102,7 +102,18 @@ else if (includeSymbollist && includeLowercaselist && includeNumberlist) {
   var choices = Symbollist.concat(Lowercaselist, Numberlist)
 }
 }
+ // This the empty array that the generated password will be pushed into
+ var passwordArray = [];
 
+ // For loop to randomly generate from the choices variable until the length designated is reached. Output it to passwordArray
+ for (var i = 0; i < designateLength; i++) {
+   var finalChoices = choices[Math.floor(Math.random() * choices.length)];
+   passwordArray.push(finalChoices)
+ }
+
+ // Transform the array of passwordArray into a string called passwordString, as my final output for the function generatePassword()
+ var passwordString = passwordArray.join("");
+ return passwordString;
 }
 
 // Add event listener to generate button
