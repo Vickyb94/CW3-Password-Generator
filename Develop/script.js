@@ -21,6 +21,17 @@ var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 var numberlist = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var symbollist = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
+// function to generate password after clicking button
+var generatePassword = function() {
+  alert("Enter your password!" + "\n" + "Respond to the propmpts that follow")
+  
+  designateLength = parseInt(prompt("How many characters would you like your password to be?" + "\n" + "Choose between 8 and 128 characters.")); {
+    if (!designateLength || designateLength < 8 || designateLength > 128) {
+      alert("Please enter a password  with at least 8 and no more than 128 characters. Try Again!");
+      generatePassword();
+    }
+  }
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
