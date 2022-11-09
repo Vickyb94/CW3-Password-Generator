@@ -105,7 +105,8 @@ else if (includeSymbollist && includeLowercaselist && includeNumberlist) {
  // This the empty array that the generated password will be pushed into
  var passwordArray = [];
 
- // For loop to randomly generate from the choices variable until the length designated is reached. Output it to passwordArray
+ // This for loop is to generate random characters based on the selected choices and desired length of the user
+ //Password output is pushed into empty array
  for (var i = 0; i < designateLength; i++) {
    var finalChoices = choices[Math.floor(Math.random() * choices.length)];
    passwordArray.push(finalChoices)
