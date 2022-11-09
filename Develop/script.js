@@ -16,10 +16,10 @@ var includeLowercaselist;
 var includeNumberlist;
 var includeSymbollist;
 
-var uppercaselist = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var numberlist = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-var symbollist = ["!", "@", "#", "$", "%", "^", "&", "*"]
+var Uppercaselist = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var Lowercaselist = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var Numberlist = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var Symbollist = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
 // function to generate password after clicking button
 var generatePassword = function() {
@@ -36,11 +36,23 @@ var generatePassword = function() {
 
   else { 
     // Confirm various characters you would like in your password
-    includeUppercaselist = confirm("Do you want Upper Case Letters (i.e. A, B, C) in your password?" +"\n" + "Click OK to add uppercase letters.");
-    includelowercaselist = confirm("Do you want Lower Case Letters (i.e. a, b, c) in your password?" + "\n" + "Click OK to add lowercase letters.");
+    includeUppercaselist = confirm("Do you want Uppercase Letters (i.e. A, B, C) in your password?" +"\n" + "Click OK to add uppercase letters.");
+    includeLowercaselist = confirm("Do you want Lowercase Letters (i.e. a, b, c) in your password?" + "\n" + "Click OK to add lowercase letters.");
     includeNumberlist = confirm("Do you want Numbers (i.e. 1, 2, 3) in your password?" + "\n" + "Click OK to add numbers.");
     includeSymbollist = confirm("Do you want Symbols (i.e. !@#$%^&*) in your password?" + "\n" + "Click OK to add symbols.");
   };
+
+  var choices;
+
+ // Choice made when all four character types are chosen
+ if (includeUppercaselist && includeLowercaselist && includeNumberlist && includeSymbollist) {
+  var choices = Uppercaselist.concat(Lowercaselist, Numberlist, Symbollist);
+}
+
+// If none of the character types are chosen
+else if (!includeUppercaselist && !includeLowercaselist && !includeNumberlist && !includeSymbollist) {
+  choices = alert("Please choose at least one criteria!")
+}
 }
 
 }
