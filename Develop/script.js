@@ -44,14 +44,62 @@ var generatePassword = function() {
 
   var choices;
 
- // Choice made when all four character types are chosen
+ // Choice made when all four character types are chosen (boolean if this is true)
  if (includeUppercaselist && includeLowercaselist && includeNumberlist && includeSymbollist) {
   var choices = Uppercaselist.concat(Lowercaselist, Numberlist, Symbollist);
 }
 
-// If none of the character types are chosen
+// If none of the character types are chosen (boolean if this is true)
 else if (!includeUppercaselist && !includeLowercaselist && !includeNumberlist && !includeSymbollist) {
   choices = alert("Please choose at least one criteria!")
+}
+
+//If only one character type is chosen
+else if (includeUppercaselist) {
+  var choices = Uppercaselist
+}
+else if (includeLowercaselist) {
+  var choices = Lowercaselist
+}
+else if (includeNumberlist) {
+  var choices = Numberlist
+}
+else if (includeSymbollist) {
+  var choices = Symbollist
+}
+
+// If just two character types are chosen
+else if (includeUppercaselist && includeLowercaselist) {
+  var choices = Uppercaselist.concat(Lowercaselist)
+}
+else if (includeUppercaselist && includeNumberlist) {
+  var choices = Uppercaselist.concat(Numberlist)
+}
+else if (includeUppercaselist && includeSymbollist) {
+  var choices = Uppercaselist.concat(Symbollist)
+}
+else if (includeLowercaselist && includeNumberlist) {
+  var choices = Lowercaselist.concat(Numberlist)
+}
+else if (includeLowercaselist && includeSymbollist) {
+  var choices = Lowercaselist.concat(Symbollist)
+}
+else if (includeNumberlist && includeSymbollist) {
+  var choices = Numberlist.concat(Symbollist)
+}
+
+ // If three character types are chosen
+ else if (includeUppercaselist && includeLowercaselist && includeNumberlist) {
+  var choices = Uppercaselist.concat(Lowercaselist, Numberlist)
+}
+else if (includeUppercaselist && includeLowercaselist && includeSymbollist) {
+  var choices = Uppercaselist.concat(Lowercaselist, Symbollist)
+}
+else if (includeUppercaselist && includeSymbollist && includeNumberlist) {
+  var choices = Uppercaselist.concat(Symbollist, Numberlist)
+}
+else if (includeSymbollist && includeLowercaselist && includeNumberlist) {
+  var choices = Symbollist.concat(Lowercaselist, Numberlist)
 }
 }
 
