@@ -23,14 +23,26 @@ var symbollist = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
 // function to generate password after clicking button
 var generatePassword = function() {
-  alert("Enter your password!" + "\n" + "Respond to the propmpts that follow")
+  alert("Enter your password!" + "\n" + "Respond to the prompts that follow")
+
+  var designateLength;
   
   designateLength = parseInt(prompt("How many characters would you like your password to be?" + "\n" + "Choose between 8 and 128 characters.")); {
     if (!designateLength || designateLength < 8 || designateLength > 128) {
       alert("Please enter a password  with at least 8 and no more than 128 characters. Try Again!");
       generatePassword();
-    }
+    
   }
+
+  else { 
+    // Confirm various characters you would like in your password
+    includeUppercaselist = confirm("Do you want Upper Case Letters (i.e. A, B, C) in your password?" +"\n" + "Click OK to add uppercase letters.");
+    includelowercaselist = confirm("Do you want Lower Case Letters (i.e. a, b, c) in your password?" + "\n" + "Click OK to add lowercase letters.");
+    includeNumberlist = confirm("Do you want Numbers (i.e. 1, 2, 3) in your password?" + "\n" + "Click OK to add numbers.");
+    includeSymbollist = confirm("Do you want Symbols (i.e. !@#$%^&*) in your password?" + "\n" + "Click OK to add symbols.");
+  };
+}
+
 }
 
 // Add event listener to generate button
