@@ -112,7 +112,7 @@ else if (includeSymbollist && includeLowercaselist && includeNumberlist) {
    passwordArray.push(finalChoices)
  }
 
- // Transform the array of passwordArray into a string called passwordString, as my final output for the function generatePassword()
+ //Changed the empty array into a string and once function generatePassword is executed, it returns the generated password as an output
  var passwordString = passwordArray.join("");
  return passwordString;
 }
