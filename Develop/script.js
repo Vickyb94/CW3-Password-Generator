@@ -1,15 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-  
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-
 //Array of characters 
 var includeUppercaselist;
 var includeLowercaselist;
@@ -115,6 +106,14 @@ else if (includeSymbollist && includeLowercaselist && includeNumberlist) {
  //Changed the empty array into a string and once function generatePassword is executed, it returns the generated password as an output
  var passwordString = passwordArray.join("");
  return passwordString;
+}
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
