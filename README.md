@@ -4,7 +4,7 @@ The idea behind this project is to generate random password with various array o
 
 ## Usage
 This project can be used by following the prompts displayed on the window and selecting options that apply until the desired length and password characteristics is achieved. There are alerts that pop up when the length inputed does not comply with the set conditions and also when no characters are selected according to the rules set in th code.
-Deployed Website URL- https://vickyb94.github.io/challenge-week-three/
+Deployed Website URL- https://vickyb94.github.io/CW3-Password-Generator/
 ![alt text](Develop/asset/images/PasswordGenerator%20Screenshot.png)
 
 ## Credits
