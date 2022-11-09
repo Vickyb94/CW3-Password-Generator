@@ -1,4 +1,4 @@
-# Challenge-week-three- Password Generator
+# CW3-Password-Generator
 ## Description
 The idea behind this project is to generate random password with various array of characters with desired length. This project solves the problem of having to create a password by the user because the system generates it randomly and the randomness makes it more secure that when it is made up by the user. I learnt how to make variable of choices and I also got to practice using function and for loop.
 
